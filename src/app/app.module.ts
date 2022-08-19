@@ -26,10 +26,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
-import { NavComponent } from './components/nav/nav.component';
 
-// // Componentes do projeto
-// import { NavComponent } from './components/nav/nav.component';
+// Componentes do projeto
+import { NavComponent } from './components/nav/nav.component';
 // import { HomeComponent } from './components/home/home.component';
 // import { HeaderComponent } from './components/header/header.component';
 // import { TecnicoListComponent } from './components/tecnico/tecnico-list/tecnico-list.component';
@@ -52,8 +51,8 @@ import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
   declarations: [
-    // AppComponent,
-    // NavComponent,
+    AppComponent,
+    NavComponent,
     // HomeComponent,
     // HeaderComponent,
     // TecnicoListComponent,
@@ -69,7 +68,7 @@ import { NavComponent } from './components/nav/nav.component';
     // ChamadoCreateComponent,
     // ChamadoUpdateComponent,
     // ChamadoReadComponent
-  
+
     NavComponent
   ],
   imports: [

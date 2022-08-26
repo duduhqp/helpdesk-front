@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Credenciais } from 'src/app/models/credenciais';
 
 @Component({
   selector: 'app-nav',

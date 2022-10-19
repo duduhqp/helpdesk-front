@@ -13,6 +13,9 @@ export class ClienteListComponent implements OnInit {
 
   ELEMENT_DATA: Cliente[] = []
 
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'acoes'];
+  dataSource = new MatTableDataSource<Cliente>(this.ELEMENT_DATA);
+
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   constructor(private service: ClienteService) { }
@@ -21,8 +24,7 @@ export class ClienteListComponent implements OnInit {
     this.findAll();
   }
 
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'acoes'];
-  dataSource = new MatTableDataSource<Cliente>(this.ELEMENT_DATA);
+
 
 
   findAll() {

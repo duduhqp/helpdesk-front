@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {Chamado} from "../models/chamado";
 import {API_CONFIG} from "../config/config";
+import {ChamadoUpdateComponent} from "../components/chamado/chamado-update/chamado-update.component";
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,15 @@ export class ChamadoService {
     return this.http.get<Chamado[]>(`${API_CONFIG.baseUrl}/chamados`);
   }
 
+  findById(id: any): Observable<Chamado> {
+    return this.http.get<Chamado>(`${API_CONFIG.baseUrl}/chamados/${id}`);
+  }
+
   create(chamado: Chamado): Observable<Chamado> {
     return this.http.post<Chamado>(`${API_CONFIG.baseUrl}/chamados`, chamado);
+  }
+
+  update(chamado: Chamado): Observable<Chamado> {
+    return this.http.put<Chamado>(`${API_CONFIG.baseUrl}/chamados/${chamado.id}`, chamado);
   }
 }
